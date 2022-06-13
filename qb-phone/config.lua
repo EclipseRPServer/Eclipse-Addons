@@ -1,6 +1,6 @@
 Config = Config or {}
 Config.BillingCommissions = { -- This is a percentage (0.10) == 10%
-    mechanic = 0.10
+    mechanic = 0.10,
     burgershot = 0.10
 }
 Config.Linux = true -- True if linux
