@@ -47,7 +47,7 @@
 .tablet-footer > .line {
     width: 3vw;
     height: 8px;
-    background-color: rgb(129, 129, 129);
+    background-color: rgb(181, 70, 255);
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s;

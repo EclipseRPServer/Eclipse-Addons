@@ -13,6 +13,7 @@ const app = new Vue({
         }, 
         Applications: [
             { name: 'Rules', icon: 'img/info.svg', href: 'rules' }, 
+            { name: 'Terms', icon: 'img/info.svg', href: 'terms' },
             { name: 'FaQ', icon: 'img/info.svg', href: 'faq' }, 
             { name: 'Controls', icon: 'img/controls.svg', href: 'keybinds' }
         ]
