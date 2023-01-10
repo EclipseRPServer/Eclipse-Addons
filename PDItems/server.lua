@@ -15,9 +15,3 @@ RegisterNetEvent('pddonut:buy',function(data)
     Player.Functions.RemoveMoney('cash', 3, 'rimjob')
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["rimjob"], "add", 1)
 end)
-
-QBCore.Functions.CreateUseableItem("pdcoffee", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
-    TriggerClientEvent('consumables:client:pdcoffee', source, item.name)
-end)
