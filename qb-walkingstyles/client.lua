@@ -170,10 +170,10 @@ function OpenWalkMenu()
 		header = "⬅ Close Menu",
 		txt = "",
 		params = {
-			event = "qb-menu:closeMenu",
+			event = "keep-menu:closeMenu",
 		}
 	}
-	exports['qb-menu']:openMenu(MenuOptions)
+	exports['keep-menu']:openMenu(MenuOptions)
 end
 
 RegisterNetEvent('qb-walkstyles:setwalkstyle', function(anim)
