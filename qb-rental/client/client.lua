@@ -88,7 +88,7 @@ AddEventHandler("qb-rental:vehiclelist", function(data)
             }
         })
     end
-    exports['keep-menu']:openMenu(vehicles)
+    exports['qb-menu']:openMenu(vehicles)
 end)
 
 CreateThread(function()

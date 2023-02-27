@@ -272,7 +272,7 @@ local bankingMenus = {
                     }
                 }
             }
-            exports["keep-menu"]:openMenu(table)
+            exports["qb-menu"]:openMenu(table)
         end,
         lib = function()
             lib.registerContext({
@@ -356,7 +356,7 @@ local bankingMenus = {
                     isMenuHeader = true
                 }
             end
-            exports["keep-menu"]:openMenu(table)
+            exports["qb-menu"]:openMenu(table)
         end,
         lib = function(data)
             local menuOpts = {}
@@ -414,7 +414,7 @@ local bankingMenus = {
                     }
                 }
             }
-            exports["keep-menu"]:openMenu(table)
+            exports["qb-menu"]:openMenu(table)
         end,
         lib = function(data)
             lib.registerContext({
@@ -473,7 +473,7 @@ local bankingMenus = {
                     }
                 }
             }
-            exports["keep-menu"]:openMenu(table)
+            exports["qb-menu"]:openMenu(table)
         end,
         lib = function(data)
             local menuOpts = {}
@@ -534,7 +534,7 @@ local bankingMenus = {
                     }
                 }
             }
-            exports["keep-menu"]:openMenu(table)
+            exports["qb-menu"]:openMenu(table)
         end,
         lib = function(data)
             lib.registerContext({
