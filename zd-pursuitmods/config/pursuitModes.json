@@ -1,0 +1,103 @@
+{
+    "configId": "np-vehicles:pursuitModes",
+    "client": {
+        "global": {
+            "vehicles": [
+                { "model": "valor1bb", "preset": "generic" },
+                { "model": "valor2bb", "preset": "generic" },
+                { "model": "valor3bb", "preset": "generic" },
+                { "model": "valor4bb", "preset": "generic" },
+                { "model": "valor5bb", "preset": "generic" },
+                { "model": "valor6bb", "preset": "generic" },
+                { "model": "valor7bb", "preset": "generic" },
+                { "model": "valor8bb", "preset": "generic" },
+                { "model": "valor9bb", "preset": "generic" },
+                { "model": "valor10bb", "preset": "generic" },
+                { "model": "valor11bb", "preset": "generic" },
+                { "model": "valor12bb", "preset": "generic" },
+                { "model": "valor13bb", "preset": "generic" },
+                { "model": "valor14bb", "preset": "generic" },
+                { "model": "fpiu21trbb", "preset": "generic" },
+                { "model": "fpiuslickbb", "preset": "generic" },
+                { "model": "fpiu21tr", "preset": "generic" },
+                { "model": "fpiuslick", "preset": "generic" }
+            ],
+            "presets": [{
+                "id": "generic",
+                "modes": [{
+                        "name": "A",
+                        "appearance": {
+                            "colors": {
+                                "xenon": 1
+                            }
+                        },
+                        "mods": {
+                            "Turbo": false,
+                            "Engine": -1,
+                            "Brakes": -1,
+                            "Transmission": -1,
+                            "XenonHeadlights": 1
+                        },
+                        "handling": [
+                            { "field": "fInitialDriveForce", "multiplier": 1.4 }
+                        ]
+                    },
+                    {
+                        "name": "A+",
+                        "appearance": {
+                            "colors": {
+                                "xenon": 2
+                            }
+                        },
+                        "mods": {
+                            "Turbo": true,
+                            "Engine": 2,
+                            "Brakes": 1,
+                            "Transmission": 2,
+                            "XenonHeadlights": 1
+                        },
+                        "handling": [
+                            { "field": "fInitialDriveForce", "multiplier": 1.8 }
+                        ]
+                    },
+                    {
+                        "name": "S",
+                        "appearance": {
+                            "colors": {
+                                "xenon": 3
+                            }
+                        },
+                        "mods": {
+                            "Turbo": true,
+                            "Engine": 3,
+                            "Brakes": 2,
+                            "Transmission": 2,
+                            "XenonHeadlights": 1
+                        },
+                        "handling": [
+                            { "field": "fInitialDriveForce", "multiplier": 2.0 }
+                        ]
+                    },
+                    {
+                        "name": "S+",
+                        "appearance": {
+                            "colors": {
+                                "xenon": 4
+                            }
+                        },
+                        "mods": {
+                            "Turbo": true,
+                            "Engine": 4,
+                            "Brakes": 2,
+                            "Transmission": 3,
+                            "XenonHeadlights": 1
+                        },
+                        "handling": [
+                            { "field": "fInitialDriveForce", "multiplier": 2.4 }
+                        ]
+                    }
+                ]
+            }]
+        }
+    }
+}
