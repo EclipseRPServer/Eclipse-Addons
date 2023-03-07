@@ -73,7 +73,7 @@ local misc_recipe = {
                show_level_in_mail = true,
                success_rate = 100,
                amount = 1, -- crafted amount
-               duration = 60,
+               duration = 40,
                materials = {
                     ["metalscrap"] = 10,
                     ["plastic"] = 50,
@@ -104,7 +104,7 @@ local misc_recipe = {
           crafting = {
                show_level_in_mail = true,
                success_rate = 100,
-               amount = 1, -- crafted amount
+               amount = 5, -- crafted amount
                duration = 60,
                materials = {
                     ["metalscrap"] = 20,
@@ -191,11 +191,40 @@ local misc_recipe = {
           crafting = {
                show_level_in_mail = true,
                success_rate = 100,
-               amount = 1, -- crafted amount
-               duration = 60,
+               amount = 20, -- crafted amount
+               duration = 20,
                materials = {
                     ["steel"] = 20,
                     ["rubber"] = 20,
+               },
+               exp_per_craft = 5
+          }
+     },
+     ['head_bag'] = {
+          categories = {
+               main = 'misc',
+          },
+          item_settings = {
+               label = 'Head Bad',
+               image = 'head_bag', -- use inventory's images
+               object = {
+                    name = 'prop_cs_rub_binbag_01',
+                    rotation = vector3(0.0, 180.0, 0.0)
+               },
+               level = 150,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               },
+
+          },
+          crafting = {
+               show_level_in_mail = true,
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 20,
+               materials = {
+                    ["cloth"] = 40,
                },
                exp_per_craft = 5
           }
@@ -221,7 +250,7 @@ local misc_recipe = {
           crafting = {
                show_level_in_mail = true,
                success_rate = 100,
-               amount = 1, -- crafted amount
+               amount = 5, -- crafted amount
                duration = 30,
                materials = {
                     ["iron"] = 60,
@@ -251,7 +280,7 @@ local misc_recipe = {
           crafting = {
                show_level_in_mail = true,
                success_rate = 100,
-               amount = 1, -- crafted amount
+               amount = 5, -- crafted amount
                duration = 30,
                materials = {
                     ["aluminum"] = 60,
