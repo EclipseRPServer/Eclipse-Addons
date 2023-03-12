@@ -57,7 +57,7 @@ RegisterCommand("pursuit", function(source, args)
             break
         end
     end
-    if  PlayerJob.name == 'police' then 
+    if  PlayerJob.type == 'leo' then 
         if not vehiclePresetName then 
             return 
         end
