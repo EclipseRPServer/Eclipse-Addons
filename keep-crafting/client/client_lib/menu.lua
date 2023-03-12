@@ -11,7 +11,7 @@ local QbMenu = {}
 Workbench = nil
 ------------------
 function Open_menu()
-     if Config.menu == 'keep-menu' then
+     if Config.menu == 'qb-menu' then
           menu:main_categories()
           return
      end
@@ -112,7 +112,7 @@ local function search_for_items_in_category(category)
 end
 
 ------------------
---   keep-Menu
+--   qb-menu
 ------------------
 
 function menu:main_categories()
@@ -164,11 +164,11 @@ function menu:main_categories()
 
      Menu[#Menu + 1] = {
           header = Lang:t('menu.leave'),
-          event = "keep-menu:closeMenu",
+          event = "qb-menu:closeMenu",
           leave = true
      }
 
-     exports['keep-menu']:createMenu(Menu)
+     exports['qb-menu']:createMenu(Menu)
 end
 
 function menu:player_crafting_information()
@@ -204,11 +204,11 @@ function menu:player_crafting_information()
                },
                {
                     header = Lang:t('menu.leave'),
-                    event = "keep-menu:closeMenu",
+                    event = "qb-menu:closeMenu",
                     leave = true
                }
           }
-          exports['keep-menu']:createMenu(Menu)
+          exports['qb-menu']:createMenu(Menu)
      end)
 end
 
@@ -241,11 +241,11 @@ function menu:sub_categories(args)
 
      Menu[#Menu + 1] = {
           header = Lang:t('menu.leave'),
-          event = "keep-menu:closeMenu",
+          event = "qb-menu:closeMenu",
           leave = true
      }
 
-     exports["keep-menu"]:createMenu(Menu)
+     exports["qb-menu"]:createMenu(Menu)
 end
 
 function menu:crafting_items_list(data)
@@ -308,7 +308,7 @@ function menu:crafting_items_list(data)
           leave = true
      }
 
-     exports["keep-menu"]:createMenu(Menu)
+     exports["qb-menu"]:createMenu(Menu)
 end
 
 function menu:crafting_menu(item, data)
@@ -363,7 +363,7 @@ function menu:crafting_menu(item, data)
           }
      }
 
-     exports["keep-menu"]:createMenu(Menu)
+     exports["qb-menu"]:createMenu(Menu)
      if item.item_settings.object and next(item.item_settings.object) then
           if entity and box and cam then
                SpawnAndCameraRemover(entity, box, cam)
@@ -372,7 +372,7 @@ function menu:crafting_menu(item, data)
 end
 
 ------------------
---    keep-menu
+--    qb-menu
 ------------------
 
 function QbMenu:main_categories()
@@ -424,11 +424,11 @@ function QbMenu:main_categories()
           header = Lang:t('menu.leave'),
           icon = 'fa-solid fa-circle-xmark',
           params = {
-               event = "keep-menu:closeMenu",
+               event = "qb-menu:closeMenu",
           },
      }
 
-     exports['keep-menu']:openMenu(Menu)
+     exports['qb-menu']:openMenu(Menu)
 end
 
 function QbMenu:player_crafting_information()
@@ -464,11 +464,11 @@ function QbMenu:player_crafting_information()
                     header = Lang:t('menu.leave'),
                     icon = 'fa-solid fa-circle-xmark',
                     params = {
-                         event = "keep-menu:closeMenu",
+                         event = "qb-menu:closeMenu",
                     },
                }
           }
-          exports['keep-menu']:openMenu(Menu)
+          exports['qb-menu']:openMenu(Menu)
      end)
 end
 
@@ -500,11 +500,11 @@ function QbMenu:sub_categories(args)
      Menu[#Menu + 1] = {
           header = Lang:t('menu.leave'),
           params = {
-               event = 'keep-menu:closeMenu'
+               event = 'qb-menu:closeMenu'
           }
      }
 
-     exports["keep-menu"]:openMenu(Menu)
+     exports["qb-menu"]:openMenu(Menu)
 end
 
 function QbMenu:crafting_items_list(data)
@@ -569,11 +569,11 @@ function QbMenu:crafting_items_list(data)
           header = Lang:t('menu.leave'),
           icon = 'fa-solid fa-circle-xmark',
           params = {
-               event = 'keep-menu:closeMenu'
+               event = 'qb-menu:closeMenu'
           }
      }
 
-     exports["keep-menu"]:openMenu(Menu)
+     exports["qb-menu"]:openMenu(Menu)
 end
 
 local nui_traker = false
@@ -636,12 +636,12 @@ function QbMenu:crafting_menu(args)
                header = Lang:t('menu.leave'),
                icon = 'fa-solid fa-circle-xmark',
                params = {
-                    event = 'keep-menu:closeMenu'
+                    event = 'qb-menu:closeMenu'
                }
           }
      }
 
-     exports["keep-menu"]:openMenu(Menu)
+     exports["qb-menu"]:openMenu(Menu)
 
      NUI_tracker(item, entity, box, cam)
 end
@@ -656,7 +656,7 @@ function NUI_tracker(item, entity, box, cam)
 end
 
 ------------------------
---    keep-menu events
+--    qb-menu events
 ------------------------
 
 AddEventHandler('keep-crafting:client_lib:main_categories', function()

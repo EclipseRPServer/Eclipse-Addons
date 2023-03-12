@@ -218,11 +218,11 @@ exports("closeMenu", CancelMenu)
 exports("Overlay", Overlay)
 exports("CloseOverlay", CloseOverlay)
 
-RegisterNetEvent("keep-menu:createMenu", ContextMenu)
-RegisterNetEvent("keep-menu:closeMenu", CancelMenu)
+RegisterNetEvent("qb-menu:createMenu", ContextMenu)
+RegisterNetEvent("qb-menu:closeMenu", CancelMenu)
 -- @swkeep: overlay
-RegisterNetEvent("keep-menu:Overlay", Overlay)
-RegisterNetEvent("keep-menu:closeOverlay", CloseOverlay)
+RegisterNetEvent("qb-menu:Overlay", Overlay)
+RegisterNetEvent("qb-menu:closeOverlay", CloseOverlay)
 
 
 local function qb(menu)
@@ -269,8 +269,8 @@ local function qb(menu)
                 temp_btn.event = item.params.event
             end
 
-            if temp_btn.event == 'keep-menu:closeMenu' then
-                temp_btn.event = 'keep-menu:closeMenu'
+            if temp_btn.event == 'qb-menu:closeMenu' then
+                temp_btn.event = 'qb-menu:closeMenu'
             end
         end
         converted[key] = temp_btn
@@ -381,7 +381,7 @@ if DevMode then
                     math.random(50, 150))
             }
         end
-        exports['keep-menu']:createMenu(menu)
+        exports['qb-menu']:createMenu(menu)
     end
 
     RegisterKeyMapping('+testmenu', 'test menu', 'keyboard', 'o')

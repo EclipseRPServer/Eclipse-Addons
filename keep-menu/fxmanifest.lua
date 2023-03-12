@@ -1,7 +1,7 @@
 fx_version "cerulean"
 games { 'gta5' }
 
-name "keep-menu"
+name "qb-menu"
 description "qbcore menu"
 author "NeroHiro (modified by Swkeep#7049)"
 
