@@ -99,7 +99,7 @@ end
 RegisterNetEvent("nx-spikes:client:usespikes", function()
     local player = QBCore.Functions.GetPlayerData()
     if Config.RequireJobPlace then 
-        if player.job.name == 'police' then 
+        if player.job.type == 'leo' then 
             DeployStinger()
             TriggerServerEvent('nx-spikes:server:removespikes')
         else 

@@ -17,7 +17,7 @@ end)
 RegisterNetEvent("nx-spikes:server:pickupspikes", function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.job.name == 'police' then 
+    if Player.PlayerData.job.type == 'leo' then 
         Player.Functions.AddItem(Config.Item, 1)
     end
 end)
