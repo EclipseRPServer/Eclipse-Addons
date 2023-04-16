@@ -11,7 +11,7 @@ local QbMenu = {}
 Workbench = nil
 ------------------
 function Open_menu()
-     if Config.menu == 'qb-menu' then
+     if Config.menu == 'keep-menu' then
           menu:main_categories()
           return
      end
@@ -112,7 +112,7 @@ local function search_for_items_in_category(category)
 end
 
 ------------------
---   qb-menu
+--   keep-Menu
 ------------------
 
 function menu:main_categories()
@@ -164,11 +164,11 @@ function menu:main_categories()
 
      Menu[#Menu + 1] = {
           header = Lang:t('menu.leave'),
-          event = "qb-menu:closeMenu",
+          event = "keep-menu:closeMenu",
           leave = true
      }
 
-     exports['qb-menu']:createMenu(Menu)
+     exports['keep-menu']:createMenu(Menu)
 end
 
 function menu:player_crafting_information()
@@ -204,11 +204,11 @@ function menu:player_crafting_information()
                },
                {
                     header = Lang:t('menu.leave'),
-                    event = "qb-menu:closeMenu",
+                    event = "keep-menu:closeMenu",
                     leave = true
                }
           }
-          exports['qb-menu']:createMenu(Menu)
+          exports['keep-menu']:createMenu(Menu)
      end)
 end
 
@@ -241,11 +241,11 @@ function menu:sub_categories(args)
 
      Menu[#Menu + 1] = {
           header = Lang:t('menu.leave'),
-          event = "qb-menu:closeMenu",
+          event = "keep-menu:closeMenu",
           leave = true
      }
 
-     exports["qb-menu"]:createMenu(Menu)
+     exports["keep-menu"]:createMenu(Menu)
 end
 
 function menu:crafting_items_list(data)
@@ -308,7 +308,7 @@ function menu:crafting_items_list(data)
           leave = true
      }
 
-     exports["qb-menu"]:createMenu(Menu)
+     exports["keep-menu"]:createMenu(Menu)
 end
 
 function menu:crafting_menu(item, data)
@@ -363,7 +363,7 @@ function menu:crafting_menu(item, data)
           }
      }
 
-     exports["qb-menu"]:createMenu(Menu)
+     exports["keep-menu"]:createMenu(Menu)
      if item.item_settings.object and next(item.item_settings.object) then
           if entity and box and cam then
                SpawnAndCameraRemover(entity, box, cam)
@@ -689,12 +689,12 @@ end)
 --    Events
 ------------------
 
--- RegisterKeyMapping('+crafting_menu', 'crafting_menu', 'keyboard', 'e')
--- RegisterCommand('+crafting_menu', function()
---      local state, workbench = GetClosest_Workbenches()
---      if not IsPauseMenuActive() and state then
---           Workbench = workbench
---           menu:main_categories()
---           return
---      end
--- end, false)
+RegisterKeyMapping('+crafting_menu', 'crafting_menu', 'keyboard', 'e')
+RegisterCommand('+crafting_menu', function()
+     local state, workbench = GetClosest_Workbenches()
+     if not IsPauseMenuActive() and state then
+          Workbench = workbench
+          menu:main_categories()
+          return
+     end
+end, false)

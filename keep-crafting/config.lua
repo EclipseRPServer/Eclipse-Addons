@@ -1,6 +1,6 @@
 Config = Config or {}
 
-Config.menu = 'qb-menu' -- qb-menu (recommended) / qb-menu
+Config.menu = 'keep-menu' -- qb-menu (recommended) / qb-menu
 
 Config.model_loading = {
      timeout = 1500, --ms
@@ -613,18 +613,19 @@ Config.workbenches = {
           recipes = { misc_recipe, medial },
           radius = 3.0
      },
-     -- {
-     --      table_model = 'gr_prop_gr_bench_04b',
-     --      coords = vector3(-59.5, 6388.77, 30.49),
-     --      rotation = vector3(0.0, 0.0, 225.0),
-     --      job = {
-     --           allowed_list = {},
-     --           allowed_grades = {}
-     --      },
-     --      categories = { Config.categories.blueprints, Config.categories.misc, Config.categories.medical },
-     --      recipes = { misc_recipe, medial },
-     --      radius = 3.0
-     -- },
+     {
+          table_model = 'gr_prop_gr_bench_04b',
+          coords = vector3(2020.89, 3025.39, -73.71),
+          item_show_case_offset = vector3(0.0, 0.0, 1.3),
+          rotation = vector3(0.0, 0.0, 31.0),
+          job = {
+               allowed_list = {},
+               allowed_grades = {}
+          },
+          categories = { Config.categories.blueprints  },
+          recipes = {},
+          radius = 3.0
+     },
      -- {
      --      table_model = 'gr_prop_gr_bench_02b',
      --      coords = vector3(2939.04, 4623.81, 47.72),

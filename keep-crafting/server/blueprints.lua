@@ -1,13 +1,13 @@
 local Blueprints = {
-    ['pistol_suppressor'] = {
+    ['appistol'] = {
         item_settings = {
-            label = 'Pistol suppressor',
-            image = 'pistol_suppressor', -- use inventory's images
+            label = 'AP Pistol',
+            image = 'weapon_appistol', -- use inventory's images
             object = {
-                name = 'w_at_ar_supp_02',
+                name = 'w_pi_appistol',
                 rotation = vector3(45.0, 0.0, 0.0)
             },
-            level = 5,
+            level = 0,
             hide_until_reaches_level = true,
             job = {
                 allowed_list = {},
@@ -17,21 +17,22 @@ local Blueprints = {
         crafting = {
             success_rate = 100,
             amount = 1, -- crafted amount
-            duration = 60,
+            duration = 30,
             materials = {
-                ["metalscrap"] = 50,
-                ["steel"] = 60,
-                ["rubber"] = 30,
+                ["steel"] = 100,
+                ["aluminum"] = 25,
+                ['plastic'] = 10,
+                ["rubber"] = 18,
             },
-            exp_per_craft = 5
+            exp_per_craft = 15
         }
     },
-    ['weapon_assaultrifle_mk2'] = {
+    ['microsmg'] = {
         item_settings = {
-            label = 'Assault Rifle Mk II',
-            image = 'weapon_assaultrifle_mk2', -- use inventory's images
+            label = 'Micro SMG',
+            image = 'weapon_microsmg', -- use inventory's images
             object = {
-                name = 'w_ar_assaultrifle',
+                name = 'w_sb_microsmg',
                 rotation = vector3(45.0, 0.0, 0.0)
             },
             level = 0,
@@ -43,11 +44,14 @@ local Blueprints = {
         crafting = {
             success_rate = 100,
             amount = 1, -- crafted amount
-            duration = 5,
+            duration = 60,
             materials = {
-                ["plastic"] = 4,
+                ["steel"] = 200,
+                ["aluminum"] = 45,
+                ['plastic'] = 20,
+                ["rubber"] = 30,
             },
-            exp_per_craft = 50
+            exp_per_craft = 30
         }
     },
 }
