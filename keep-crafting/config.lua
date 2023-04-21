@@ -31,6 +31,9 @@ Config.categories = {
                ['smg'] = {
                     label = 'SMG',
                },
+               ['attch'] = {
+                    label = 'Attchments',
+               },
           }
      },
      ['medical'] = {
@@ -418,15 +421,15 @@ local medial = {
 }
 
 local weapons_recipe = {
-     ['weapon_handcuffs'] = {
+     ['cuffkey'] = {
           categories = {
                sub = 'tools',
           },
           item_settings = {
-               label = 'Handcuffs',
-               image = 'weapon_handcuffs', -- use inventory's images
+               label = 'Handcuff Key',
+               image = 'cuffkey', -- use inventory's images
                object = {
-                    name = 'p_cs_cuffs_02_s',
+                    name = 'bkr_prop_jailer_keys_01a',
                     rotation = vector3(250.0, 0.0, 0.0)
                },
                level = 50,
@@ -440,7 +443,7 @@ local weapons_recipe = {
                amount = 1, -- crafted amount
                duration = 30,
                materials = {
-                    ["steel"] = 30,
+                    ["steel"] = 100,
                },
                exp_per_craft = 5
           }
@@ -450,7 +453,7 @@ local weapons_recipe = {
                sub = 'pistol',
           },
           item_settings = {
-               label = 'Pistol ammo',
+               label = 'Pistol Ammo',
                image = 'pistol_ammo', -- use inventory's images
                object = {
                     name = 'prop_ld_ammo_pack_01',
@@ -469,16 +472,16 @@ local weapons_recipe = {
                materials = {
                     ["steel"] = 30,
                },
-               exp_per_craft = 5
+               exp_per_craft = 10
           }
      },
-     ['weapon_pistol'] = {
+     ['weapon_pistol50'] = {
           categories = {
                sub = 'pistol',
           },
           item_settings = {
-               label = 'Walther P99',
-               image = 'weapon_pistol', -- use inventory's images
+               label = 'Desert Eagle',
+               image = 'weapon_pistol50', -- use inventory's images
                object = {
                     name = 'w_pi_pistol50',
                     rotation = vector3(45.0, 0.0, 0.0)
@@ -494,54 +497,27 @@ local weapons_recipe = {
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
-                    ["aluminum"] = 80,
-                    ["steel"] = 70,
-                    ["rubber"] = 30,
-               },
-               exp_per_craft = 30
-          }
-     },
-     ['weapon_combatpistol'] = {
-          categories = {
-               sub = 'pistol',
-          },
-          item_settings = {
-               label = 'Combat Pistol',
-               image = 'weapon_combatpistol', -- use inventory's images
-               object = {
-                    name = 'w_pi_combatpistol',
-                    rotation = vector3(45.0, 0.0, 0.0)
-               },
-               level = 200,
-               job = {
-                    allowed_list = {},
-                    allowed_grades = {}
-               }
-          },
-          crafting = {
-               success_rate = 100,
-               amount = 1, -- crafted amount
-               duration = 60,
-               materials = {
-                    ["aluminum"] = 100,
-                    ["steel"] = 90,
+                    ["aluminum"] = 170,
+                    ["steel"] = 150,
                     ["rubber"] = 50,
+                    ["plastic"] = 20,
                },
-               exp_per_craft = 40
+               exp_per_craft = 25
           }
      },
-     ['weapon_appistol'] = {
+     ['weapon_heavypistol'] = {
           categories = {
                sub = 'pistol',
           },
           item_settings = {
-               label = 'AP Pistol',
-               image = 'weapon_appistol', -- use inventory's images
+               label = 'Heavy Pistol',
+               image = 'weapon_heavypistol', -- use inventory's images
                object = {
-                    name = 'w_pi_appistol',
+                    name = 'w_pi_heavypistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 500,
+               level = 100,
+               hide_until_reaches_level = false,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
@@ -555,23 +531,24 @@ local weapons_recipe = {
                     ["aluminum"] = 130,
                     ["steel"] = 120,
                     ["rubber"] = 70,
+                    ["plastic"] = 20,
                },
-               exp_per_craft = 50
+               exp_per_craft = 25
           }
      },
-     ['pistol_suppressor'] = {
+     ['weapon_pistol'] = {
           categories = {
-               sub = 'smg',
+               sub = 'pistol',
           },
           item_settings = {
-               label = 'Pistol suppressor',
-               image = 'pistol_suppressor', -- use inventory's images
+               label = 'P250',
+               image = 'weapon_pistol', -- use inventory's images
                object = {
-                    name = 'w_at_ar_supp_02',
+                    name = 'w_pi_pistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 5,
-               hide_until_reaches_level = true,
+               level = 100,
+               hide_until_reaches_level = false,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
@@ -582,11 +559,344 @@ local weapons_recipe = {
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
-                    ["metalscrap"] = 50,
-                    ["steel"] = 60,
+                    ["aluminum"] = 130,
+                    ["steel"] = 120,
+                    ["rubber"] = 70,
+                    ["plastic"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['weapon_appistol'] = {
+          categories = {
+               sub = 'pistol',
+          },
+          item_settings = {
+               label = 'AP Pistol',
+               image = 'weapon_appistol', -- use inventory's images
+               object = {
+                    name = 'w_pi_appistol',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 100,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["aluminum"] = 130,
+                    ["steel"] = 120,
+                    ["rubber"] = 70,
+                    ["plastic"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['pistol_suppressor'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Pistol Suppressor',
+               image = 'pistol_suppressor', -- use inventory's images
+               object = {
+                    name = 'w_at_pi_supp_2',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
                     ["rubber"] = 30,
                },
-               exp_per_craft = 5
+               exp_per_craft = 25
+          }
+     },
+     ['pistol50_extendedclip'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Desert Eagle Extendedclip',
+               image = 'pistol_extendedclip', -- use inventory's images
+               object = {
+                    name = 'w_pi_pistol50_mag2',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["plastic"] = 10,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['appistol_extendedclip'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'AP Pistol Extendedclip',
+               image = 'pistol_extendedclip', -- use inventory's images
+               object = {
+                    name = 'w_pi_appistol_mag2',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["plastic"] = 10,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['microsmg_extendedclip'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Micro SMG Extendedclip',
+               image = 'pistol_extendedclip', -- use inventory's images
+               object = {
+                    name = 'w_sb_microsmg_mag2',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["plastic"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['machinepistol_drum'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Tec 9 Extendedclip',
+               image = 'rifle_drummag', -- use inventory's images
+               object = {
+                    name = 'w_sb_compactsmg_boxmag',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 110,
+                    ["steel"] = 80,
+                    ["plastic"] = 25,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['microsmg_scope'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Micro SMG Scope',
+               image = 'smg_scope', -- use inventory's images
+               object = {
+                    name = 'w_at_scope_macro',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["rubber"] = 30,
+                    ["plastic"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['smg_suppressor'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'SMG Suppressor',
+               image = 'pistol_suppressor', -- use inventory's images
+               object = {
+                    name = 'w_at_ar_supp_02',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["rubber"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['shotgun_suppressor'] = {
+          categories = {
+               sub = 'attch',
+          },
+          item_settings = {
+               label = 'Shotgun Suppressor',
+               image = 'pistol_suppressor', -- use inventory's images
+               object = {
+                    name = 'w_at_ar_supp_02',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 200,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 90,
+                    ["steel"] = 70,
+                    ["rubber"] = 20,
+               },
+               exp_per_craft = 25
+          }
+     },
+     ['weapon_machinepistol'] = {
+          categories = {
+               sub = 'smg',
+          },
+          item_settings = {
+               label = 'Tec 9',
+               image = 'weapon_machinepistol', -- use inventory's images
+               object = {
+                    name = 'w_sb_compactsmg',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 400,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 220,
+                    ["steel"] = 120,
+                    ["rubber"] = 80,
+               },
+               exp_per_craft = 50
+          }
+     },
+     ['weapon_microsmg'] = {
+          categories = {
+               sub = 'smg',
+          },
+          item_settings = {
+               label = 'Micro SMG',
+               image = 'weapon_microsmg', -- use inventory's images
+               object = {
+                    name = 'w_sb_microsmg',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 400,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 220,
+                    ["steel"] = 120,
+                    ["rubber"] = 80,
+               },
+               exp_per_craft = 50
           }
      },
 }
@@ -595,7 +905,7 @@ Config.workbench_default_model = 'gr_prop_gr_bench_04a'
 
 Config.workbenches = {
      -- -- items
-     {
+     {--[[  ]]
           table_model = "gr_prop_gr_bench_04b",
           coords = vector3(1346.55, 4391.04, 43.36),
           item_show_case_offset = vector3(0.0, 0.0, 1.3),
@@ -622,8 +932,8 @@ Config.workbenches = {
                allowed_list = {},
                allowed_grades = {}
           },
-          categories = { Config.categories.blueprints  },
-          recipes = {},
+          categories = { Config.categories.weapons },
+          recipes = { weapons_recipe },
           radius = 3.0
      },
      -- {
@@ -699,3 +1009,18 @@ Config.workbenches = {
 -- gr_prop_gr_sdriver_03
 
 -- gr_prop_gr_vice_01a
+
+
+-- pistol50_extendedclip
+-- appistol_extendedclip
+-- microsmg_extendedclip
+-- microsmg_scope
+-- smg_suppressor
+-- shotgun_suppressor
+
+
+-- weapon_machinepistol
+-- weapon_microsmg
+
+-- weapon_heavypistol
+-- weapon_pistol
