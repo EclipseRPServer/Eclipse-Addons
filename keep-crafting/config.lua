@@ -467,10 +467,10 @@ local weapons_recipe = {
           },
           crafting = {
                success_rate = 100,
-               amount = 1, -- crafted amount
+               amount = 10, -- crafted amount
                duration = 30,
                materials = {
-                    ["steel"] = 30,
+                    ["steel"] = 50,
                },
                exp_per_craft = 10
           }
@@ -547,7 +547,7 @@ local weapons_recipe = {
                     name = 'w_pi_pistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 100,
+               level = 50,
                hide_until_reaches_level = false,
                job = {
                     allowed_list = {},
@@ -586,7 +586,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 200,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -617,7 +617,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 150,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -647,7 +647,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 150,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -677,7 +677,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 250,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -707,7 +707,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 200,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -737,7 +737,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 200,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -798,7 +798,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 300,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -828,7 +828,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 200,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -858,7 +858,7 @@ local weapons_recipe = {
                }
           },
           crafting = {
-               success_rate = 100,
+               success_rate = 200,
                amount = 1, -- crafted amount
                duration = 60,
                materials = {
@@ -895,6 +895,34 @@ local weapons_recipe = {
                     ["metalscrap"] = 220,
                     ["steel"] = 120,
                     ["rubber"] = 80,
+               },
+               exp_per_craft = 50
+          }
+     },
+     ['smg_ammo'] = {
+          categories = {
+               sub = 'smg',
+          },
+          item_settings = {
+               label = 'SMG Ammo',
+               image = 'smg_ammo', -- use inventory's images
+               object = {
+                    name = 'prop_ld_ammo_pack_01',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 400,
+               hide_until_reaches_level = false,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 10, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["steel"] = 60,
                },
                exp_per_craft = 50
           }
