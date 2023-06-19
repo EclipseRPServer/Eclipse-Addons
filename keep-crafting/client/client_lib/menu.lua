@@ -689,12 +689,12 @@ end)
 --    Events
 ------------------
 
-RegisterKeyMapping('+crafting_menu', 'crafting_menu', 'keyboard', 'e')
-RegisterCommand('+crafting_menu', function()
-     local state, workbench = GetClosest_Workbenches()
-     if not IsPauseMenuActive() and state then
-          Workbench = workbench
-          menu:main_categories()
-          return
-     end
-end, false)
+-- RegisterKeyMapping('+crafting_menu', 'crafting_menu', 'keyboard', 'e')
+-- RegisterCommand('+crafting_menu', function()
+--      local state, workbench = GetClosest_Workbenches()
+--      if not IsPauseMenuActive() and state then
+--           Workbench = workbench
+--           menu:main_categories()
+--           return
+--      end
+-- end, false)
