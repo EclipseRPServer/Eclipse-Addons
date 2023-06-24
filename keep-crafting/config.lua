@@ -31,6 +31,9 @@ Config.categories = {
                ['smg'] = {
                     label = 'SMG',
                },
+               ['ar'] = {
+                label = 'AR',
+               },
                ['attch'] = {
                     label = 'Attchments',
                },
@@ -475,6 +478,33 @@ local weapons_recipe = {
                exp_per_craft = 10
           }
      },
+     ['rifle_ammo'] = {
+        categories = {
+             sub = 'ar',
+        },
+        item_settings = {
+             label = 'Rifle Ammo',
+             image = 'rifle_ammo', -- use inventory's images
+             object = {
+                  name = 'prop_ld_ammo_pack_01',
+                  rotation = vector3(250.0, 0.0, 0.0)
+             },
+             level = 200,
+             job = {
+                  allowed_list = {},
+                  allowed_grades = {}
+             }
+        },
+        crafting = {
+             success_rate = 100,
+             amount = 15, -- crafted amount
+             duration = 30,
+             materials = {
+                  ["steel"] = 75,
+             },
+             exp_per_craft = 15
+        }
+   },
      ['weapon_pistol50'] = {
           categories = {
                sub = 'pistol',
