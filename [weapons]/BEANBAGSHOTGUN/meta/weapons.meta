@@ -33,7 +33,7 @@
 					<Group>GROUP_SHOTGUN</Group>
 					<AmmoInfo ref="AMMO_SHOTGUN"/>
 					<AimingInfo ref="RIFLE_LO_PUMP_STRAFE"/>
-					<ClipSize value="8"/>
+					<ClipSize value="2"/>
 					<AccuracySpread value="2.500000"/>
 					<AccurateModeAccuracyModifier value="0.500000"/>
 					<RunAndGunAccuracyModifier value="2.000000"/>
@@ -97,9 +97,9 @@
 					<ReloadTimeMP value="-1.000000"/>
 					<ReloadTimeSP value="-1.000000"/>
 					<VehicleReloadTime value="1.000000"/>
-					<AnimReloadRate value="1.000000"/>
+					<AnimReloadRate value="0.500000"/>
 					<BulletsPerAnimLoop value="8"/>
-					<TimeBetweenShots value="0.800000"/>
+					<TimeBetweenShots value="3.200000"/>
 					<TimeLeftBetweenShotsWhereShouldFireIsCached value="-1.000000"/>
 					<SpinUpTime value="0.000000"/>
 					<SpinTime value="0.000000"/>
@@ -158,7 +158,7 @@
 					<NetworkPedDamageModifier value="1.000000"/>
 					<NetworkHeadShotPlayerDamageModifier value="1.000000"/>
 					<LockOnRange value="35.000000"/>
-					<WeaponRange value="40.000000"/>
+					<WeaponRange value="25.000000"/>
 					<BulletDirectionOffsetInDegrees value="0.000000"/>
 					<AiSoundRange value="-1.000000"/>
 					<AiPotentialBlastEventRange value="-1.000000"/>
