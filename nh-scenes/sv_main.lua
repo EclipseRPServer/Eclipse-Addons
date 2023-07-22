@@ -5,7 +5,7 @@ SendScenes = function(ply)
 end
 
 LogScene = function(ply, text, coords)
-    local f, err = io.open("textfiles/scenes.txt", "a")
+    local f, err = io.open("scenes.txt", "a")
     if not f then return print(err) end
     f:write("Player: [" .. ply .. "] Name: [" .. GetPlayerName(ply) .. "] Placed Scene: [" .. text .. "] At Coords = " .. coords .. "\n")
     f:close()
